@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?famfamily=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+
+
+.parent {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 100px 1fr 100px;
+grid-column-gap: 2px;
+grid-row-gap: 0px;
+background: url(../img/bg1.jpg) fixed stretch;
+background-size: cover;
+background-repeat: no-repeat;
+margin: 0 0 0 0;
+padding: 0 0 0 0;
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+}
+
+.head { grid-area: 1 / 1 / 2 / 4; }
+.head img {
+	vertical-align: bottom;
+	position: relative;
+	top: 50px;
+}
+.left { grid-area: 2 / 1 / 3 / 2; }
+
+.stage { 
+	grid-area: 2 / 2 / 3 / 3;
+	border: 20px #333030; 
+	border-style: ridge;
+	box-shadow: 0 10px 22px rgba(0,0,0,0.45), 0 10px 22px rgba(0,0,0,0.50);
+	background-color: #002222;
+}
+
+.stage video {
+	min-width: 1280px;
+	min-height: 720px;
+}
+
+.right { grid-area: 2 / 3 / 3 / 4; }
+.foot { grid-area: 3 / 1 / 4 / 4; }
