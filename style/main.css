@@ -60,7 +60,7 @@ padding: 0 0 0 0;
 
 .wrap{
   position:relative;
-  width:50vmin; height:50vmin;
+  width:900px; height:600px;
   margin:0 auto;
   background:transparent;
   transform:scale(0.2) translatez(0px);
@@ -70,7 +70,7 @@ padding: 0 0 0 0;
 .wrap a{
   position:absolute;
   left:0; top:0;
-  width:47.5%; height:47.5%;
+  width:50%; height:50%;
   overflow:hidden;
   transform:scale(.8) translateZ(0px);
   background:#585247;
@@ -121,7 +121,7 @@ a:nth-child(5){
   width:55%;height:55%;
   left:22.5%; top:22.5%;
   border-radius:50vmin;
-  box-shadow:0 0 0 5vmin #E3DFD2;
+  box-shadow:0 0 0 10px #e46971;
   transform:scale(1);
 }
 a:nth-child(5) div{
