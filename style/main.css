@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?famfamily=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
 
 
@@ -59,7 +59,9 @@ padding: 0 0 0 0;
 }
 
 .wrap{
-  position:relative;
+  position:fixed;
+  top: 18%;
+  left: 16%;
   width:900px; height:600px;
   margin:0 auto;
   background:transparent;
@@ -82,7 +84,14 @@ padding: 0 0 0 0;
   transition:opacity .5s;
   border-radius:inherit;
 }
+
+.wrap a:link { text-decoration: none; }
+.wrap a:visited { text-decoration: none; }
+.wrap a:hover { text-decoration: none; }
+.wrap a:active { text-decoration: none; }
+
 a:nth-child(1){
+  border:  solid 2px #b9b3a6;
   border-radius:15px 0 0 0;
   transform-origin: 110% 110%;
   transition:transform .4s .15s;
@@ -90,7 +99,22 @@ a:nth-child(1){
 a:nth-child(1) div{
   background-image:url('../img/nav-plumbing.jpg');
 }
+
+#plumbingDiv{
+color: #FFF;
+font-family: Roboto Slab;
+font-weight: 500;
+font-size: 35px;
+text-decoration: none;
+text-align: left;
+text-shadow: 2px 2px 4px #333;
+vertical-align: text-top;
+padding-left: 20px;
+padding-top: 20px;
+}
+
 a:nth-child(2){
+  border:  solid 2px #b1b26c;
   border-radius:0 15px 0 0;
   left:52.5%;
   transform-origin: -10% 110%;
@@ -99,7 +123,23 @@ a:nth-child(2){
 a:nth-child(2) div{
   background-image:url('../img/nav-electrical.jpg');
 }
+
+#electricalDiv{
+color: #FFF;
+font-family: Roboto Slab;
+font-weight: 500;
+font-size: 35px;
+text-decoration: none;
+text-align: right;
+text-shadow: 2px 2px 4px #333;
+vertical-align: text-top;
+padding-right: 20px;
+padding-top: 20px;
+}
+
+
 a:nth-child(3){
+  border:  solid 2px #91aeac;
   border-radius:0 0 0 15px;
   top:52.5%;
   transform-origin: 110% -10%;
@@ -108,7 +148,22 @@ a:nth-child(3){
 a:nth-child(3) div{
   background-image:url('../img/nav-paint.jpg');
 }
+#paintDiv{
+color: #FFF;
+font-family: Roboto Slab;
+font-weight: 500;
+font-size: 35px;
+text-decoration: none;
+text-shadow: 2px 2px 4px #333;
+display: flex;
+align-items: flex-end;
+justify-content: left;
+height: 100%; 
+width: 100%;
+}
+
 a:nth-child(4){
+  border:  solid 2px #ae9871;
   border-radius:0 0 15px 0;
   top:52.5%; left:52.5%;
   transform-origin: -10% -10%;
@@ -117,10 +172,25 @@ a:nth-child(4){
 a:nth-child(4) div{
   background-image: url('../img/nav-hardware.jpg');
 }
+
+#hardwareDiv{
+color: #FFF;
+font-family: Roboto Slab;
+font-weight: 500;
+font-size: 35px;
+text-decoration: none;
+text-shadow: 2px 2px 4px #333;
+display: flex;
+align-items: flex-end;
+justify-content: right;
+height: 100%; 
+width: 100%;
+}
+
 a:nth-child(5){
   width:55%;height:55%;
   left:22.5%; top:22.5%;
-  border-radius:50vmin;
+  border-radius:100px;
   box-shadow:0 0 0 10px #e46971;
   transform:scale(1);
 }
@@ -128,6 +198,18 @@ a:nth-child(5) div{
   background-image: url('../img/nav-find.jpg');
 }
 
+#findDiv{
+color: #FFF;
+font-family: Roboto Slab;
+font-weight: 500;
+font-size: 35px;
+text-decoration: none;
+text-align: center;
+text-shadow: 2px 2px 4px #333;
+vertical-align: middle;
+height: 100%; 
+width: 100%;
+}
 
 span{
   position:relative;
@@ -173,3 +255,7 @@ a:hover div{
 
 .right { grid-area: 2 / 3 / 3 / 4; }
 .foot { grid-area: 3 / 1 / 4 / 4; }
+.foot img {
+  vertical-align: bottom;
+  position: relative;
+}
