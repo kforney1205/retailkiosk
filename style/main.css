@@ -59,9 +59,9 @@ padding: 0 0 0 0;
 }
 
 .wrap{
-  position:fixed;
-  top: 18%;
-  left: 16%;
+  position:absolute;
+  top: 6%;
+  left: 14%;
   width:900px; height:600px;
   margin:0 auto;
   background:transparent;
@@ -206,7 +206,7 @@ font-size: 35px;
 text-decoration: none;
 text-align: center;
 text-shadow: 2px 2px 4px #333;
-vertical-align: middle;
+padding-top: 100px;
 height: 100%; 
 width: 100%;
 }
