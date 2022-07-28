@@ -80,7 +80,7 @@ padding: 0 0 0 0;
 .wrap a div{
   height:100%;
   background-size:cover;
-  opacity:.7;
+  opacity:.75;
   transition:opacity .5s;
   border-radius:inherit;
 }
