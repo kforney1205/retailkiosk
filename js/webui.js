@@ -1,17 +1,6 @@
 // **** WEBRTC UI **** //
 // v1.0.0 : initial version by Simon Smith
 
-
-// --------------------------------------------
-const strToVMR = "ace-demoVMR1@gcp.pexsupport.com";
-const strProtocol = 'sip';
-const strRole = 'Visitor';
-const strDisplayName = '-#- Ace Hardware Demo1 -#-'
-// --------------------------------------------
-const node = "edge1-useast.gcp.pexsupport.com";
-const pinGuest = '';
-
-
 var video;
 var bandwidth;
 var conference;
@@ -52,7 +41,9 @@ function connected(videoURL) {
 }
 
 function initialise(node, conference, userbw, name, userpin) {
-    video = document.getElementById("video");
+    
+
+	video = document.getElementById("video");
 	video.style.display = "block";
     console.log("Bandwidth: " + userbw);
     console.log("Conference: " + conference);
@@ -71,4 +62,3 @@ function initialise(node, conference, userbw, name, userpin) {
 
     rtc.makeCall(node, conference, name, bandwidth);
 }
-
