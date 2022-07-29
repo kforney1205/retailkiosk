@@ -17,12 +17,13 @@ function finalise(event) {
 
 function remoteDisconnect(reason) {
     /* cleanup(); */
-	rtc.disconnect();
+    rtc.disconnect();
     video.src = "";
     /* alert(reason); */
-	video.style.display = "none";
+    video.style.display = "none";
     window.removeEventListener('beforeunload', finalise);
-	console.log("Conference Discconnected");
+    console.log("Conference Discconnected");
+    location. href = "https://kforney1205.github.io/retailkiosk";
     /* window.close(); */
 }
 
