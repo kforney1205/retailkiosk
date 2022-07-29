@@ -26,10 +26,112 @@ window.onload = function()
         
        <video id="video" autoplay="autoplay" poster="img/loading_icon05.gif"></video> 
 
+    <div class="videoControls" align="center">
+          <button class="icon playerbtn"><i id="output-tog" class="output-tog" title="mute/unmute your speakers"></i></button>
+          <button class="icon playerbtn"><i id="camera-tog" class="camera-tog" title="mute/unmute camera"></i></button>
+          <button class="icon playerbtn" onclick="micMute()"><i id="mic-tog" class="mic-tog" title="mute/unmute microphone"></i></button>
+          <button class="icon playerbtn" id="fullscreen-tog"><i class="fullscreen-tog" title="make video full screen"></i></button>
+          <button class="icon playerbtn" onclick="window.location='index.html';"><i id="disconnect" class="disconnect" title="end session"></i></button>
+        </div>
 
         </div>
         <div class="right"></div>
         <div class="foot" align="center"> <img src="img/webcam1.png"> </div>
       </div>
+
+<script type="text/javascript">
+
+//Video Nav Elements
+
+var vid_tog = document.querySelector('.camera-tog');
+var mic_tog = document.querySelector('.mic-tog');
+var output_tog = document.querySelector('.output-tog');
+var disc_tog = document.querySelector('.disconnect');
+var fullscreen_tog = document.querySelector('.fullscreen-tog');
+
+// Mute and Unmute Camera
+
+vid_tog.addEventListener('click', function(){
+    muteVideo = rtc.muteVideo();
+    vid_tog.classList.toggle("is-active");
+});
+
+// Mute and Unmute Microphone
+
+mic_tog.addEventListener('click', function(){
+  muteAudio = rtc.muteAudio();
+  mic_tog.classList.toggle("is-active") 
+});
+
+
+// Mute and Unmute Listening Device
+var media_stage = document.getElementById("video");
+media_stage.muted = false
+output_tog.addEventListener('click', function(){
+  output_tog.classList.toggle("is-active");
+  if (media_stage.muted === true) {
+      media_stage.muted = false;
+    }
+    else if (media_stage.muted === false) {
+      media_stage.muted = true;
+    }
+});
+
+
+// Disconnect (works but no need to toggle)
+
+disc_tog.addEventListener('click', () => {
+    disc_tog.classList.toggle("is-active");
+});
+
+// Go Fullscreen (works but no need to toggle, toggle is automatic)
+
+fullscreen_tog.addEventListener('click', () => {
+    fullscreen_tog.classList.toggle("is-active");
+});
+
+
+//FullScreen Button
+
+
+var requestFullscreen = function (ele) {
+  if (ele.requestFullscreen) {
+    ele.requestFullscreen();
+  } else if (ele.webkitRequestFullscreen) {
+    ele.webkitRequestFullscreen();
+  } else if (ele.mozRequestFullScreen) {
+    ele.mozRequestFullScreen();
+  } else if (ele.msRequestFullscreen) {
+    ele.msRequestFullscreen();
+  } else {
+    console.log('Fullscreen API is not supported.');
+  }
+};
+
+var exitFullscreen = function () {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) {
+    document.webkitExitFullscreen();
+  } else if (document.mozCancelFullScreen) {
+    document.mozCancelFullScreen();
+  } else if (document.msExitFullscreen) {
+    document.msExitFullscreen();
+  } else {
+    console.log('Fullscreen API is not supported.');
+  }
+};
+
+var fsVidButton = document.getElementById('fullscreen-tog');
+var video = document.getElementById('video');
+
+fsVidButton.addEventListener('click', function(e) {
+  e.preventDefault();
+  requestFullscreen(video);
+});
+
+</script>
+
+
   </body>
 </html> 

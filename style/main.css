@@ -41,7 +41,7 @@ padding: 0 0 0 0;
 	box-shadow: 0 10px 22px rgba(0,0,0,0.45), 0 10px 22px rgba(0,0,0,0.50);
   background-repeat: no-repeat;
   background-size: cover;
-	background-color: #002222;
+	background-color: #fbfcf4;
 	position: relative;
 	width: 1280px;
 	height: 720px;
@@ -57,7 +57,8 @@ padding: 0 0 0 0;
 	left: 0;
 }
 
-.kisokLoop{
+
+.kioskLoop{
 background-image: url(../img/BW-Video.gif);
 position: relative;
 width: 1280px;
@@ -65,6 +66,124 @@ height: 720px;
 top: 0;
 left: 0;
 }
+
+/* BEGIN VIDEO CONTROLS */
+
+.videoControls {
+  width:  100%;
+  height: 50px;
+  background-color: #333;
+  cursor:  pointer;
+  /* border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+   background-image: linear-gradient(180deg, #333 0%, #000 127%); */
+  background: rgba(255,255,255,0.3);
+  position: absolute;
+  display: inline-block;
+  bottom: 0;
+  left: 0;
+}
+  
+  .icon::before {
+    display: inline-block;
+    /* text-rendering: auto;
+    -webkit-font-smoothing: antialiased; */
+  }
+
+  .playerbtn {
+    cursor: pointer;
+    height: 40px;
+    font-size: 25px;
+    width: 50px;
+    background-color: transparent;
+    border: none;
+    align-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .playerbtn button{
+    align-content: center;
+  }
+
+  .camera-tog:before {
+  font: var(--fa-font-solid);
+  content: "\f03d";
+  color: #FFF;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  } 
+
+  .camera-tog.is-active:before {
+  font: var(--fa-font-solid);
+  content: "\f4e2";
+  color: #ec6c70;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  .mic-tog:before {
+  font: var(--fa-font-solid);
+  content: "\f130";
+  color: #FFF;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  } 
+
+  .mic-tog.is-active:before {
+  font: var(--fa-font-solid);
+  content: "\f131";
+  color: #ec6c70;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+
+  .output-tog:before {
+  font: var(--fa-font-solid);
+  content: "\f028";
+  color: #FFF;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  } 
+
+  .output-tog.is-active:before {
+  font: var(--fa-font-solid);
+  content: "\f6a9";
+  color: #ec6c70;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  .fullscreen-tog:before {
+  font: var(--fa-font-solid);
+  content: "\f065";
+  color: #FFF;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  } 
+
+  .fullscreen-tog.is-active:before {
+  font: var(--fa-font-solid);
+  content: "\f065";
+  color: #FFF;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  .disconnect:before {
+  font: var(--fa-font-solid);
+  content: "\e552";
+  color: #ec6c70;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  } 
+
+  .disconnect.is-active:before {
+  font: var(--fa-font-solid);
+  content: "\e552";
+  color: #ec6c70;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+
+
+
+
+/* BEGIN INDEX NAV */
 
 .wrap{
   position:absolute;
