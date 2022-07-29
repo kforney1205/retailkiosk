@@ -39,7 +39,6 @@ padding: 0 0 0 0;
 	border: 20px #333030; 
 	border-style: ridge;
 	box-shadow: 0 10px 22px rgba(0,0,0,0.45), 0 10px 22px rgba(0,0,0,0.50);
-  background-image: url(../img/BW-Video.gif);
   background-repeat: no-repeat;
   background-size: cover;
 	background-color: #002222;
@@ -56,6 +55,15 @@ padding: 0 0 0 0;
 	position: absolute;
 	top: 0;
 	left: 0;
+}
+
+.kisokLoop{
+background-image: url(../img/BW-Video.gif);
+position: relative;
+width: 1280px;
+height: 720px;
+top: 0;
+left: 0;
 }
 
 .wrap{
