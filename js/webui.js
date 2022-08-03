@@ -23,7 +23,7 @@ function remoteDisconnect(reason) {
     video.style.display = "none";
     window.removeEventListener('beforeunload', finalise);
     console.log("Conference Discconnected");
-    location.href = "https://kforney1205.github.io/retailkiosk";
+    /*location.href = "index.html";*/
     /* window.close(); */
 }
 
