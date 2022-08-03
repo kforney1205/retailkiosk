@@ -23,7 +23,7 @@ function remoteDisconnect(reason) {
     video.style.display = "none";
     window.removeEventListener('beforeunload', finalise);
     console.log("Conference Discconnected");
-    /*location.href = "index.html";*/
+    location.href = "index.html";
     /* window.close(); */
 }
 

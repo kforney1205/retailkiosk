@@ -13,8 +13,12 @@
 window.onload = function()
 {
     /* Params: conf node, conf name, bandwidth, display name, PIN */
-    initialise("pex-gcc.com", "AceHardwareDemo3", "576", "Visitor", "");
+    var urlSearchParams = new URLSearchParams(window.location.search);
+    var params = Object.fromEntries(urlSearchParams.entries());
+    var sessionid = ("aceel" + params.sessionid);
+    initialise("pex-gcc.com", sessionid, "1600", "Store Kiosk", "2022");
 }
+</script>
 </script>
   </head>
   <body>
